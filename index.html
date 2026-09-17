@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scriptorium</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <div id="vignette"></div>
+
+  <div id="hud">
+    <div class="tag" id="hud-page-tag"><span id="hud-page">Page 1 of 4</span><span class="sep">·</span><span id="hud-layer">Black ink</span></div>
+    <div class="tag" id="hud-inked-tag"><span id="hud-inked">Text 0% · Initial 0%</span></div>
+    <div class="tag" id="hud-spill"><span class="label">Spilled ink</span><canvas id="spill" width="170" height="22"></canvas></div>
+  </div>
+
+  <div id="hint" class="tag gone">Hold the left mouse button and follow the letters.</div>
+  <button id="dev-toggle" class="tag" title="dev tools (D)">dev</button>
+  <div id="dev" class="tag gone">
+    <span class="label">dev</span>
+    <button data-act="layer">Finish layer</button>
+    <button data-act="page">Finish page</button>
+    <button data-act="skip">Skip wait</button>
+    <button data-act="reset">Reset page</button>
+    <button data-act="ruin">Ruin</button>
+    <button data-act="quake">Quake</button>
+    <span class="sep">·</span>
+    <span id="dev-pages"></span>
+  </div>
+  <button id="dev-toggle" class="tag" title="dev tools (D)">dev</button>
+  <div id="dev" class="tag gone">
+    <span class="label">dev</span>
+    <button data-act="layer">Finish layer</button>
+    <button data-act="page">Finish page</button>
+    <button data-act="skip">Skip wait</button>
+    <button data-act="reset">Reset page</button>
+    <button data-act="ruin">Ruin</button>
+    <button data-act="quake">Quake</button>
+    <span class="sep">·</span>
+    <span id="dev-pages"></span>
+  </div>
+  <div id="toast" class="tag gone"></div>
+
+  <div id="card" class="paper">
+    <div class="title"><span class="rubric">S</span>criptorium</div>
+    <div class="rule"></div>
+    <p>The abbot wants the book copied by Michaelmas, and neatly. Run the quill along the letters and the ink fills them in. On the big letter it turns to gold by itself.</p>
+    <p class="small">Hold the left mouse button to write. Ink outside the letters stains the page; too many stains and the leaf is torn out. Turn a finished page by its bottom corner.</p>
+    <div class="cta">Click anywhere to begin</div>
+  </div>
+
+  <div id="end" class="paper gone">
+    <div class="title"><span class="rubric">H</span>ere endeth the book</div>
+    <div class="rule"></div>
+    <p id="end-text"></p>
+    <button id="again">Write it again</button>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

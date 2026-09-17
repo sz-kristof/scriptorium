@@ -1,0 +1,17 @@
+// World units: one page is 1.0 wide and 1.4 tall. Y is up, the desk top is y = 0.
+export const PAGE_W = 1.0;
+export const PAGE_H = 1.4;
+export const TEX_W = 1024;          // page texture size in px
+export const TEX_H = 1434;
+export const LEAF_T = 0.003;        // thickness of one leaf
+export const TOTAL_LEAVES = 40;     // leaves in the block (only the first few are written for now)
+export const COVER_T = 0.018;
+export const COVER_OVERHANG = 0.025;
+export const SPINE_GAP = 0.05;      // gap between the two covers
+export const GUTTER_W = 0.14;       // how far from the spine the pages dip into the gutter
+export const GUTTER_DIP = 0.018;
+export const TOL_PX = 2;            // px outside a letter that still count as clean
+export const LETTER_AT = 0.95;      // a letter settles into solid paint once this much of it is inked; a layer is done when every letter has
+export const MAX_LINES = 7;         // the font shrinks until a page fits in this many lines
+export const BLOT_BUDGET = 0.007;   // spilled area allowed, as a fraction of the page's letter area
+export const PAGE_X0 = SPINE_GAP / 2;   // right page's spine edge
